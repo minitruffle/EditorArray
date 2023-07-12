@@ -46,7 +46,7 @@ public class EditorArray
                 length++;
             }
 
-            if (GUILayout.Button("-", EditorStyles.miniButtonMid, GUILayout.Width(35)))
+            if (length > 0 && GUILayout.Button("-", EditorStyles.miniButtonMid, GUILayout.Width(35)))
             { 
                 length--;
             }
