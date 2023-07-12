@@ -7,18 +7,18 @@ public class EditorArray
     public string name;
     public bool expanded;
 
-    public WFCModule[] arr;
+    public YourClass[] arr;
 
     public EditorArray(int length, string name)
     {
         this.length = length;
         this.name = name;
-        arr = new WFCModule[length];
+        arr = new YourClass[length];
     }
 
     int last;
 
-    WFCModule[] lastArr;
+    YourClass[] lastArr;
 
     public void Update()
     {
@@ -35,7 +35,7 @@ public class EditorArray
         {
             for (int i = 0; i < length; i++)
             {
-                arr[i] = EditorGUILayout.ObjectField(arr[i], typeof(WFCModule), false) as WFCModule;
+                arr[i] = EditorGUILayout.ObjectField(arr[i], typeof(YourClass), false) as YourClass;
             }
 
             GUILayout.BeginHorizontal();
@@ -65,7 +65,7 @@ public class EditorArray
     {
         if (length != last)
         {
-            arr = new WFCModule[length];
+            arr = new YourClass[length];
             
             if (length > last)
             {
